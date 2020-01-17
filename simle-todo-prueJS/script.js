@@ -87,18 +87,18 @@ const storeValue = function () {
     console.log("saved");
 };
 
-const roadValue = function () {
-    console.log("road?");
+const readValue = function () {
+    console.log("reading...");
     if (!!this.window.localStorage.compleatedTask || this.window.localStorage.incompleateTask) {
         completedTasksHolder.innerHTML = this.window.localStorage.compleatedTask;
         incompleteTaskHolder.innerHTML = this.window.localStorage.incompleateTask;
-        console.log("roaded");
+        console.log("complete");
     }
 };
 
 // set functions
 addButton.onclick = addTask;
-roadValue();
+readValue();
 
 let i;
 for (i = 0; i < incompleteTaskHolder.children.length; i++) {
